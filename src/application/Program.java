@@ -1,17 +1,16 @@
 package application;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import model.entities.Departamento;
+import model.dao.FabricaDao;
+import model.dao.VendedorDao;
 import model.entities.Vendedor;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		Departamento dp = new Departamento(1, "Books");
-		Vendedor vend = new Vendedor(2, "Maria", "maria@gmail.com", new Date(), 5000.0, dp);
+		VendedorDao vendDao = FabricaDao.createVendedorDao();
+		
+		Vendedor vend = vendDao.findById(7);
 
 		System.out.println(vend);
 
