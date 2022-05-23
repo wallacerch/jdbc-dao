@@ -35,6 +35,12 @@ public class Program {
 		Vendedor newVend = new Vendedor(null, "Greg White", "greg@gmail.com", new Date(), 4000.0, dep);
 		vendDao.insert(newVend);
 		System.out.println("Vendedor inserido! Novo id = " + newVend.getId());
+		
+		System.out.println("===Teste update===");
+		vend = vendDao.findById(1);
+		vend.setNome("Bob Black");
+		vendDao.update(vend);
+		System.out.println("Atualização completa!");
 	}
 
 }
