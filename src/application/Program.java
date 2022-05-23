@@ -31,7 +31,7 @@ public class Program {
 			System.out.println(vendedor);
 		}
 		
-		System.out.println("===Teste findById===");
+		System.out.println("===Teste insert===");
 		Vendedor newVend = new Vendedor(null, "Greg White", "greg@gmail.com", new Date(), 4000.0, dep);
 		vendDao.insert(newVend);
 		System.out.println("Vendedor inserido! Novo id = " + newVend.getId());
@@ -41,6 +41,10 @@ public class Program {
 		vend.setNome("Bob Black");
 		vendDao.update(vend);
 		System.out.println("Atualização completa!");
+		
+		System.out.println("===Teste deleteById===");
+		vendDao.deleteById(9);
+		System.out.println("Deleção completa!");
 	}
 
 }
