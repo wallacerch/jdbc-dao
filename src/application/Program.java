@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Date;
 import java.util.List;
 
 import model.dao.FabricaDao;
@@ -29,6 +30,11 @@ public class Program {
 		for (Vendedor vendedor : lista) {
 			System.out.println(vendedor);
 		}
+		
+		System.out.println("===Teste findById===");
+		Vendedor newVend = new Vendedor(null, "Greg White", "greg@gmail.com", new Date(), 4000.0, dep);
+		vendDao.insert(newVend);
+		System.out.println("Vendedor inserido! Novo id = " + newVend.getId());
 	}
 
 }
