@@ -10,7 +10,7 @@ public class Program {
 
 		VendedorDao vendDao = FabricaDao.createVendedorDao();
 		
-		Vendedor vend = vendDao.findById(7);
+		Vendedor vend = vendDao.findById(3);
 
 		System.out.println(vend);
 
