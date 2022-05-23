@@ -1,6 +1,5 @@
 package application;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import model.dao.FabricaDao;
@@ -14,13 +13,19 @@ public class Program {
 
 		VendedorDao vendDao = FabricaDao.createVendedorDao();
 		
-		System.out.println("===TESTE FINDBYID===");
+		System.out.println("===Teste findById===");
 		Vendedor vend = vendDao.findById(3);
 		System.out.println(vend);
 		
-		System.out.println("===TESTE FINDBYDEPARTAMENTO===");
+		System.out.println("===Teste findByDepartamento===");
 		Departamento dep = new Departamento(2, null);
 		List<Vendedor> lista = vendDao.findByDepartamento(dep);
+		for (Vendedor vendedor : lista) {
+			System.out.println(vendedor);
+		}
+		
+		System.out.println("===Teste findAll===");
+		lista = vendDao.findAll();
 		for (Vendedor vendedor : lista) {
 			System.out.println(vendedor);
 		}
