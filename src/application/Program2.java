@@ -23,21 +23,21 @@ public class Program2 {
 		for (Departamento departamento : lista) {
 			System.out.println(departamento);
 		}
-//		
-//		System.out.println("===Teste insert===");
-//		Vendedor newVend = new Vendedor(null, "Greg White", "greg@gmail.com", new Date(), 4000.0, dep);
-//		vendDao.insert(newVend);
-//		System.out.println("Vendedor inserido! Novo id = " + newVend.getId());
-//		
-//		System.out.println("===Teste update===");
-//		vend = vendDao.findById(1);
-//		vend.setNome("Bob Black");
-//		vendDao.update(vend);
-//		System.out.println("Atualização completa!");
-//		
-//		System.out.println("===Teste deleteById===");
-//		vendDao.deleteById(9);
-//		System.out.println("Deleção completa!");
+		
+		System.out.println("===Teste insert===");
+		Departamento newDep = new Departamento(null, "Sports");
+		depDao.insert(newDep);
+		System.out.println("Departamento inserido! Novo id = " + newDep.getId());
+		
+		System.out.println("===Teste update===");
+		dep = depDao.findById(3);
+		dep.setNome("Food");
+		depDao.update(dep);
+		System.out.println("Atualização completa!");
+		
+		System.out.println("===Teste deleteById===");
+		depDao.deleteById(8);
+		System.out.println("Deleção completa!");
 	}
 
 }
