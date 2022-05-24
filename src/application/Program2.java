@@ -18,18 +18,11 @@ public class Program2 {
 		Departamento dep = depDao.findById(1);
 		System.out.println(dep);
 		
-//		System.out.println("===Teste findByDepartamento===");
-//		Departamento dep = new Departamento(2, null);
-//		List<Vendedor> lista = vendDao.findByDepartamento(dep);
-//		for (Vendedor vendedor : lista) {
-//			System.out.println(vendedor);
-//		}
-//		
-//		System.out.println("===Teste findAll===");
-//		lista = vendDao.findAll();
-//		for (Vendedor vendedor : lista) {
-//			System.out.println(vendedor);
-//		}
+		System.out.println("===Teste findAll===");
+		List<Departamento>lista = depDao.findAll();
+		for (Departamento departamento : lista) {
+			System.out.println(departamento);
+		}
 //		
 //		System.out.println("===Teste insert===");
 //		Vendedor newVend = new Vendedor(null, "Greg White", "greg@gmail.com", new Date(), 4000.0, dep);
